@@ -4,6 +4,9 @@
   "description": "",
   "main": "main.js",
   "type": "module",
+  "bin": {
+    "eduquick": "main.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "edupage-api": "^0.8.3"
+    "edupage-api": "^0.8.3",
+    "ora": "^6.1.0"
   }
 }

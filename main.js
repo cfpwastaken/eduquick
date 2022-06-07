@@ -1,5 +1,9 @@
+#!/usr/bin/env node
 import { Edupage } from "edupage-api";
 import { readFileSync } from "node:fs";
+import ora from "ora";
+
+let spinner = ora("Loading...").start();
 
 const login = JSON.parse(readFileSync("./login.json", "utf8"));
 
@@ -11,6 +15,7 @@ await ep.login(login.username, login.password);
 const table = await ep.getTimetableForDate(day);
 const lessons = table.lessons;
 const testsToday = ep.tests.filter(l => isToday(l.fromDate) || isToday(l.toDate));
+spinner.stop();
 
 for(const lesson of lessons) {
   console.log(
