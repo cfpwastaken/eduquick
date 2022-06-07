@@ -29,7 +29,7 @@ function termArgVNR(arg, short, def, ving) {
 }
 
 if(termArgVNR("help", "h", false, true)) {
-  console.log(`${chalk.bold.green("EduQuick")} v${chalk.bold.yellow("1.2.0")} - Quickly get information about your school day.`);
+  console.log(`${chalk.bold.green("EduQuick")} v${chalk.bold.yellow("1.2.1")} - Quickly get information about your school day.`);
   console.log(`${chalk.italic.green("Usage")}: ${chalk.bold.yellow("eduquick")} [options]`);
   console.log(`${chalk.italic.green("Options")}:`);
   console.log(`  ${chalk.bold.yellow("--help, -h")} - Show this help message.`);
