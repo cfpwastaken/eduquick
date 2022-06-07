@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^5.0.1",
     "edupage-api": "^0.8.3",
     "ora": "^6.1.0"
   }
