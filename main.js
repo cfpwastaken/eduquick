@@ -3,6 +3,11 @@ import { Edupage } from "edupage-api";
 import { readFileSync } from "node:fs";
 import ora from "ora";
 import chalk from "chalk";
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { join } from "node:path";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 function termArg(arg, short, def) {
   let index = process.argv.indexOf("--" + arg);
@@ -36,7 +41,7 @@ if(termArgVNR("help", "h", false, true)) {
 
 let spinner = ora(chalk.blueBright("Loading...")).start();
 
-const login = JSON.parse(readFileSync("./login.json", "utf8"));
+const login = JSON.parse(readFileSync(join(__dirname, "./login.json"), "utf8"));
 
 const ep = new Edupage();
 
