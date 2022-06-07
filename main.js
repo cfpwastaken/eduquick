@@ -30,7 +30,7 @@ if(termArgVNR("help", "h", false, true)) {
   console.log(`  ${chalk.bold.yellow("--help, -h")} - Show this help message.`);
   console.log(`  ${chalk.bold.yellow("--tomorrow, -t [days]")} - Get the schedule for [days] days from tomorrow (default 1).`);
   console.log(`  ${chalk.bold.yellow("--yesterday, -y [days]")} - Get the schedule for [days] days from yesterday (default 1).`);
-  console.log(`  ${chalk.bold.yellow("--date, -d")} - Get the schedule for a specific date.`);
+  console.log(`  ${chalk.bold.yellow("--date, -d <date>")} - Get the schedule for a specific date.`);
   process.exit(0);
 }
 
